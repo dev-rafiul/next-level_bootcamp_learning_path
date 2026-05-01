@@ -11,3 +11,20 @@ let mixedarr: (string | number)[] = [""]
 let coordinates : [number, number] = [20, 30];
 
 let nameAndRoll: [number, string] = [19, 'rafiul']
+
+
+//reference type : object
+
+const user: {
+    organization: "Programming Hero"; // value type literal type
+    firstName: string;
+    middleName?: string; // optional type
+    lastName: string;
+} = {
+    organization: "Programming Hero",
+    firstName: "Mezbaul",
+    lastName: "Forhan"
+}
+
+
+console.log(user)
