@@ -16,7 +16,7 @@ let nameAndRoll: [number, string] = [19, 'rafiul']
 //reference type : object
 
 const user: {
-    organization: "Programming Hero"; // value type literal type
+    readonly organization: "Programming Hero"; // value type literal type
     firstName: string;
     middleName?: string; // optional type
     lastName: string;
