@@ -1,3 +1,5 @@
+// Utilities in Typescript
+
 type Product = {
     id: number;
     name: string;
