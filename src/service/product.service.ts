@@ -1,12 +1,12 @@
-import path from "path"
+import path from "path";
+import fs from "fs";
 
-
-const filePath = path.join(process.cwd(), './src/database/db.json')
-
+const filePath = path.join(process.cwd(), "./src/database/db.json");
 
 export const readProduct = () => {
-    // console.log(filePath)
+  // console.log(filePath)
+  const products = fs.readFileSync(filePath, "utf-8");
 
-    
-
-}
+  console.log(products)
+//   console.log(products.toString());
+};

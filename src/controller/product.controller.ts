@@ -9,14 +9,13 @@ export const productController = (req:IncomingMessage, res:ServerResponse) => {
 
     if(url === "/products" && method === "GET"){  
         
-        const products = [
-            {
-                id: 1,
-                name: "Product - 1"
-            }
-        ]
+        const products = readProduct()
+        //     {
+        //         id: 1,
+        //         name: "Product - 1"
+        //     }
+        // ]
 
-        readProduct()
         
 
         res.writeHead(200, {"content-type" : "application/json"})
