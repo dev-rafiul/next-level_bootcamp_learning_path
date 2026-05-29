@@ -1,4 +1,5 @@
 import type { IncomingMessage, ServerResponse } from "http";
+import { readProduct } from "../service/product.service";
 
 export const productController = (req:IncomingMessage, res:ServerResponse) => {
 
@@ -14,6 +15,8 @@ export const productController = (req:IncomingMessage, res:ServerResponse) => {
                 name: "Product - 1"
             }
         ]
+
+        readProduct()
         
 
         res.writeHead(200, {"content-type" : "application/json"})
