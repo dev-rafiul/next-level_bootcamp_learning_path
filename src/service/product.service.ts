@@ -9,4 +9,5 @@ export const readProduct = () => {
 
   console.log(products)
 //   console.log(products.toString());
+return JSON.parse(products)
 };
