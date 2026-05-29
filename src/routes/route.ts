@@ -1,4 +1,5 @@
 import type { IncomingMessage, ServerResponse } from "http";
+import { productController } from "../controller/product.controller";
 
 export const routeHandler = (req: IncomingMessage, res:ServerResponse) => {
 
@@ -10,8 +11,7 @@ export const routeHandler = (req: IncomingMessage, res:ServerResponse) => {
         res.end(JSON.stringify({message: "This is Route Route"}));
     }
     else if(url?.startsWith("/products")){
-        res.writeHead(200, {"content-type" : "application/json"})
-        res.end(JSON.stringify({message : "This is Root Route"}))
+        productController(req, res)
     }
     else{
         res.writeHead(404, {"content-type": "application/json"})
