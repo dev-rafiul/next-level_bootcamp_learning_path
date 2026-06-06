@@ -10,5 +10,5 @@ const server: Server = createServer((req : IncomingMessage, res: ServerResponse)
 
 
 server.listen(5000, () => {
-    console.log("Server is Running on the PORT: 5000")
+    console.log("Server Restarted")
 })
