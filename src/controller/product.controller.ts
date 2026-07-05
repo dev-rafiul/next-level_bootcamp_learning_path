@@ -2,7 +2,7 @@ import type { IncomingMessage, ServerResponse } from "http";
 import { insertProduct, readProduct } from "../service/product.service";
 import type { IProduct } from "../types/product.type";
 import { parseBody } from "../utility/parseBody";
-import { CLIENT_RENEG_LIMIT } from "tls";
+
 
 export const productController = async(req:IncomingMessage, res:ServerResponse) => {
 
@@ -28,8 +28,8 @@ export const productController = async(req:IncomingMessage, res:ServerResponse) 
         res.end(JSON.stringify({message : "This is Products Route", data: products}))
     }
     else if(method === "GET" && id !== null){
-        const products = readProduct();
-        const product = products.find((p: IProduct) => p.id === id)
+        
+        const product = readProduct().find((p: IProduct) => p.id === id)
 
         res.writeHead(200, {"content-type" : "application/json"})
         res.end(JSON.stringify({message : "This is Products Route", data: product}))
