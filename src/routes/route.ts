@@ -20,3 +20,6 @@ export const routeHandler = (req: IncomingMessage, res:ServerResponse) => {
 
 
 }
+
+
+export const port = 3000;

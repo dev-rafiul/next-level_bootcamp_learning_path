@@ -1,5 +1,5 @@
 import { createServer } from "http";
-import { routeHandler } from "./routes/route";
+import { port, routeHandler } from "./routes/route";
 
 
 
@@ -12,7 +12,6 @@ routeHandler(req, res)
 
 
 
-const port = 3000;
 
 server.listen(port, () => {
     console.log("Server is Running on Port", port)
