@@ -65,5 +65,14 @@ export const productController = async(req:IncomingMessage, res:ServerResponse) 
             data: products
         }))
     }
+    else if(method === "PUT" && id !== null){
+        const body = await parseBody(req)
+        const products  = readProduct()
+
+
+        const index = products.findIndex((p: IProduct) => p.id === id)
+
+
+    }
     
 }
